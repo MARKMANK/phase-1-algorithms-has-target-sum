@@ -1,18 +1,19 @@
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    //console.log("i=" + i)
+    for (let n = 0; n < array.length; n++) {
+      //console.log("n=" + n)
+      if (i != n) {
+        if (array[i] + array[n] === target) {
+          //console.log([array[i], array[n]]);
+          return true;
+        }
+      }
+    }
+  }
+  return false;
 }
-
-/* 
-  Write the Big O time complexity of your function here
-*/
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
